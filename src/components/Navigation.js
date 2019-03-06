@@ -25,7 +25,7 @@ const StyledItem = styled(Link)`
     height: 75px;
     width: 75px;
     text-decoration: none;
-    color: #323232;
+    color: ${props => props.theme.colors.font};
     font-weight: 600;
     font-size: 13px;
     

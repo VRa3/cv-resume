@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         font-family: 'Montserrat';
         font-weight: 500;
+        color: ${theme.colors.font};
     }
     
     html, body {
