@@ -8,15 +8,38 @@ import IconsHolder from '../components/IconsHolder'
 const StyledWrapper = styled.div`
     position: relative;
     flex: 1 1 auto;
-    padding: 50px 15px 15px 15px;
+    padding: 0 15px 15px 15px;
+    background: #fff;
+    text-align: center;
+`;
+
+const StyledPhotoWrapper = styled.div`
+    position: relative;
+    border-radius: 50%;
+    margin: -75px auto 0;
+    width: 140px;
+    height: 140px;
+    background: red;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-8px, 8px);
+        border-radius: 50%;
+        width: 140px;
+        height: 140px;
+        background: ${ props => props.theme.colors.transparent.transparentPrimary };
+    }
 `;
 
 const StyledPhoto = styled.img`
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translate(-50%, -65%);
-    border: 4px solid ${ props => props.theme.colors.secondary};
+    transform: translate(-50%, 0);
+    border: 4px solid ${ props => props.theme.colors.secondary };
     border-radius: 50%;
     width: 140px;
     height: 140px;
@@ -32,7 +55,10 @@ const StyledSpan = styled.span`
 
 const PersonBlock__Body = () => (
     <StyledWrapper>
-        <StyledPhoto src={Avatar}/>
+        <StyledPhotoWrapper>
+            <StyledPhoto src={Avatar}/>
+        </StyledPhotoWrapper>
+
         <Heading>
             Carl Benson
         </Heading>
