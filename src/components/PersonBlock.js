@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 
-const PersonBlock = styled.div`
+const PersonBlock = styled.section`
     position: relative;
-    border-radius: 5px;
+    border-radius: 10px;
     margin: 0 auto;
-    padding: 15px;
-    width: 35%;
-    min-height: 700px;
+    width: 30%;
+    min-height: 600px;
     background: #fff;
 `;
 
