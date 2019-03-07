@@ -5,14 +5,13 @@ const ContentBlock = styled.article`
     z-index: 0;
     display: flex;
     flex-direction: column;
-    border-radius: 0 10px 10px 0;
     padding: 25px;
     width: 30%;
     min-height: 550px;
     background: #fff;
     
     ${ ({theme}) => theme.mediaDown.xl } {
-        width: 60%;
+        width: 37%;
         min-height: 0;
     }
     
@@ -22,6 +21,8 @@ const ContentBlock = styled.article`
     }
     
     ${ ({theme}) => theme.mediaUp.md } {
+        border-radius: 0 10px 10px 0;
+
         &::after {
             content: '';
             position: absolute;

@@ -16,11 +16,16 @@ import ContentBlock__Body from '../components/ContentBlock/ContentBlock__Body'
 
 const StyledWrapper = styled.div`
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 25px 0;
     min-height: 100vh;
     width: 100%;
+    
+    ${({theme}) => theme.mediaUp.md } {
+        flex-direction: row;
+    }
 `;
 
 const IndexPage = () => (
@@ -44,6 +49,7 @@ const IndexPage = () => (
                         Gatsby is a blazing fast modern site generator for React. Gatsby is a blazing fast modern site generator for React.
                     </ContentBlock__Body>
                 </ContentBlock__Section>
+
                 <ContentBlock__Section>
                     <SectionHeading>
                         Hello2

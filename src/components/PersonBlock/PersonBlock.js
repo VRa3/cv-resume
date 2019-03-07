@@ -6,12 +6,13 @@ const PersonBlock = styled.section`
     display: flex;
     flex-direction: column;
     border-radius: 10px;
+    margin-bottom: 25px;
     width: 30%;
     min-height: 600px;
     background: #fff;
     
     ${ ({theme}) => theme.mediaDown.xl } {
-        width: 60%;
+        width: 37%;
         min-height: 0;
     }
     
@@ -21,6 +22,8 @@ const PersonBlock = styled.section`
     }
     
     ${ ({theme}) => theme.mediaUp.md } {
+        margin-bottom: 0;
+        
         &::before {
             content: '';
             position: absolute;
