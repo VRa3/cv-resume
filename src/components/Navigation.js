@@ -13,6 +13,12 @@ const StyledWrapper = styled.nav`
     right: calc(100% + 10px);
     display: flex;
     flex-direction: column;
+    
+    ${ ({theme}) => theme.mediaDown.md } {
+        position: static;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 `;
 
 const StyledItem = styled(Link)`
@@ -29,33 +35,43 @@ const StyledItem = styled(Link)`
     font-weight: 600;
     font-size: 13px;
     
-    &:not(:last-child) {
-        &::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            display: block;
-            width: 100%;
-            height: 3px;
-            background-image: linear-gradient(to right,
-            ${ props => props.theme.colors.gradients.whiteToPrimary });
-            background-size: 200%;
-            transition: all 0.5s;
-        }
-    }
-    
-    &:hover {
-        &::before {
-            background-position: top right;
-        }
-    }
-    
     &:first-child {
-        border-radius: 5px 5px 0 0;
-    }
+        border-radius: 5px 0 0 0;
+        }
     &:last-child {
-        border-radius: 0 0 5px 5px;
+        border-radius: 0 5px 0 0;
+    }
+    
+    ${ ({theme}) => theme.mediaUp.md } {
+        &:not(:last-child) {
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-image: linear-gradient(to right,
+                ${ props => props.theme.colors.gradients.whiteToPrimary });
+                background-size: 200%;
+                transition: all 0.5s;
+            }
+        }
+        
+        &:hover {
+            &::before {
+                background-position: top right;
+            }
+        }
+        
+        &:first-child {
+        border-radius: 5px 5px 0 0;
+        }
+        &:last-child {
+            border-radius: 0 0 5px 5px;
+        }
+    }
 `;
 
 const StyledIcon = styled.img`

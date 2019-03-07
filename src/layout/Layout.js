@@ -34,22 +34,26 @@ const AnimatedBackground = styled.div`
     background: linear-gradient(to bottom right, #50a3a2 0%, #2eca7f 100%);
 `;
 
+const RelativeParent = styled.div`
+    position: relative;
+`;
+
 
 const Layout = ({children}) => (
     <ThemeProvider theme={theme}>
-        <>
+        <RelativeParent>
             <GlobalStyle/>
             <AnimatedBackground>
-                {children}
-
                 <AnimatedBox/>
                 <AnimatedBox/>
                 <AnimatedBox/>
                 <AnimatedBox/>
                 <AnimatedBox/>
-
             </AnimatedBackground>
-        </>
+
+            {children}
+
+        </RelativeParent>
     </ThemeProvider>
 )
 

@@ -11,7 +11,8 @@ import Navigation from '../components/Navigation'
 const StyledWrapper = styled.div`
     display: flex;
     align-items: center;
-    height: 100%;
+    padding: 25px 0;
+    min-height: 100vh;
     width: 100%;
 `;
 

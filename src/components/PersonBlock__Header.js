@@ -34,6 +34,11 @@ const PersonBlock__Header = styled.div`
         height: 0;
         background: #fff;
     }
+    
+    ${({theme}) => theme.mediaDown.md} {
+        border-radius: 0;
+        height: 180px;
+    }
 `;
 
 export default PersonBlock__Header

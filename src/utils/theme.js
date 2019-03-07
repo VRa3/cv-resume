@@ -16,5 +16,19 @@ export const theme = {
             transparentWhite: "rgba(255,255,255,0.3)",
             transparentGray: "rgba(40,40,40,0.3)",
         }
-    }
+    },
+    mediaUp: {
+        sm: '@media (min-width: 576px)',
+        md: '@media (min-width: 768px)',
+        lg: '@media (min-width: 992px)',
+        xl: '@media (min-width: 1200px)',
+        xxl: '@media (min-width: 1600px)',
+    },
+    mediaDown: {
+        sm: '@media (max-width: 575px)',
+        md: '@media (max-width: 767px)',
+        lg: '@media (max-width: 991px)',
+        xl: '@media (max-width: 1199px)',
+        xxl: '@media (max-width: 1599px)',
+    },
 };
