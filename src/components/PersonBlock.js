@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const PersonBlock = styled.section`
     position: relative;
+    z-index: 100;
     display: flex;
     flex-direction: column;
     border-radius: 10px;

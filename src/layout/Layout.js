@@ -2,6 +2,8 @@ import React from "react"
 import styled, {createGlobalStyle, ThemeProvider} from 'styled-components';
 import {theme} from "../utils/theme";
 
+import AnimatedBox from '../components/Posed/AnimatedBox'
+
 const GlobalStyle = createGlobalStyle`
     body {
         margin: 0;
@@ -17,6 +19,12 @@ const GlobalStyle = createGlobalStyle`
     *, *::before, *::after {
         box-sizing: border-box;
     }
+    
+    .boxo {
+        height: 200px;
+        width: 200px;
+        background: red;
+    }
 `;
 
 const AnimatedBackground = styled.div`
@@ -26,18 +34,6 @@ const AnimatedBackground = styled.div`
     background: linear-gradient(to bottom right, #50a3a2 0%, #2eca7f 100%);
 `;
 
-const AnimatedItem = styled.div`
-    position: absolute;
-    top: 15%;
-    left: 15%;
-    border-radius: 25px;
-    height: 25%;
-    padding-top: 25%;
-    width: 6px;
-    background: ${ ({props}) => theme.colors.transparentWhite };
-    transform: rotate(6deg);
-`;
-
 
 const Layout = ({children}) => (
     <ThemeProvider theme={theme}>
@@ -45,7 +41,12 @@ const Layout = ({children}) => (
             <GlobalStyle/>
             <AnimatedBackground>
                 {children}
-                <AnimatedItem/>
+
+                <AnimatedBox/>
+                <AnimatedBox/>
+                <AnimatedBox/>
+                <AnimatedBox/>
+                <AnimatedBox/>
 
             </AnimatedBackground>
         </>
