@@ -1,15 +1,17 @@
 export const theme = {
     colors: {
-        primary: "#50a3a2",
-        secondary: "#2eca7f",
-        backgroundLike: "#1b83f4",
-        font: "#232323",
-        transparentWhite: "rgba(255,255,255,0.3)",
-        transparentGray: "rgba(40,40,40,0.3)",
+        primary: "rgb(80,163,162)",
+        secondary: "rgb(46,202,127)",
+        backgroundLike: "rgb(27, 131, 244)",
+        font: "rgb(35, 35, 35)",
+        fontLighter: "rgb(112,112,112)",
         gradients: {
-            grayToPrimary: "rgba(40,40,40,0.3), #50a3a2",
-            whiteToPrimary: "rgba(255,255,255,0.3), #50a3a2",
+            grayToPrimary: "rgba(40,40,40,0.3), rgb(80, 163, 162)",
+            whiteToPrimary: "rgba(255,255,255,0.3), rgb(80, 163, 162)",
             whiteToPrimaryLighter: "rgba(255,255,255,0.3), rgba(80, 163, 162, 0.5)",
+            grayToTransparent: "rgba(255,255,255,0.3), rgba(40,40,40,0.3)",
+            primaryToTransparent: "rgb(80, 163, 162), rgba(255,255,255,0.3)",
+            secondaryToTransparent: "rgb(46, 202, 127), rgba(255,255,255,0.3)",
         },
         transparent: {
             transparentPrimary: "rgba(80,163,162,0.15)",

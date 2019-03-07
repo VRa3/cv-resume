@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Motion from '../images/backgrounds/motion.jpg';
+import Motion from '../../images/backgrounds/motion.jpg';
 
 const PersonBlock__Header = styled.div`
     position: relative;

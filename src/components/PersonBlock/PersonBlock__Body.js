@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import Avatar from '../images/avatar.jpeg';
+import Avatar from '../../images/avatar.jpeg';
 
-import Heading from "../components/Headings/Heading"
-import IconsHolder from '../components/IconsHolder'
+import Heading from "../../components/Headings/Heading"
+import IconsHolder from '../../components/IconsHolder'
 
 const StyledWrapper = styled.div`
     position: relative;
@@ -49,7 +49,7 @@ const StyledSpan = styled.span`
     display: block;
     text-align: center;
     color: ${({theme}) => theme.colors.secondary};
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: ${({smallMargin}) => smallMargin ? '14px;' : '0;'}
 `;
 

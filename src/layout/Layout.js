@@ -29,6 +29,7 @@ const GlobalStyle = createGlobalStyle`
 
 const AnimatedBackground = styled.div`
     position: absolute;
+    z-index: - 1000;
     height: 100%;
     width: 100%;
     background: linear-gradient(to bottom right, #50a3a2 0%, #2eca7f 100%);

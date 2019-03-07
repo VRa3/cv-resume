@@ -6,7 +6,6 @@ const PersonBlock = styled.section`
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    margin: 0 auto;
     width: 30%;
     min-height: 600px;
     background: #fff;

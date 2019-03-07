@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import Download from '../images/icons/download.png'
-import Arrow from '../images/icons/arrow-right.png'
+import Download from '../../images/icons/download.png'
+import Arrow from '../../images/icons/arrow-right.png'
 
 const StyledWrapper = styled.div`
     position: relative;
@@ -24,6 +24,9 @@ const StyledWrapper = styled.div`
 
 const StyledButton = styled.button`
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: none;
     padding: 16px 12px;
     width: 50%;
@@ -31,7 +34,7 @@ const StyledButton = styled.button`
     font-family: 'Montserrat';
     font-weight: 600;
     letter-spacing: 1.5px;
-    font-size: 16px;
+    font-size: 14px;
     
     &::before {
         content: '';
