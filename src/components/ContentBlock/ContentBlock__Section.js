@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const ContentBlock__Section = styled.section`
     & + & {
-        margin-top: 25px;
+        margin-top: 55px;
     }
 `;
 

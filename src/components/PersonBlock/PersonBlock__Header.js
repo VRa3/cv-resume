@@ -5,7 +5,7 @@ const PersonBlock__Header = styled.div`
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: 270px;
+    height: 290px;
     border-radius: 10px 10px 0 0;
     background-image: url(${Motion});
     background-size: cover;

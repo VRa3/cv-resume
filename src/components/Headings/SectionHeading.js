@@ -24,7 +24,7 @@ const SectionHeading = styled.header`
         content: '';
         position: absolute;
         bottom: 0;
-        left: -25px;
+        left: -40px;
         display: block;
         height: 1px;
         width: calc(100% + 25px);

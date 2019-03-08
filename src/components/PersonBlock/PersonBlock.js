@@ -7,7 +7,7 @@ const PersonBlock = styled.section`
     flex-direction: column;
     border-radius: 10px;
     margin-bottom: 25px;
-    width: 30%;
+    width: 40%;
     min-height: 600px;
     background: #fff;
     

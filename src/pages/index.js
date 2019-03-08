@@ -14,6 +14,14 @@ import ContentBlock from '../components/ContentBlock/ContentBlock'
 import ContentBlock__Section from '../components/ContentBlock/ContentBlock__Section'
 import ContentBlock__Body from '../components/ContentBlock/ContentBlock__Body'
 
+import List from '../components/List'
+
+import ServiceCard from '../components/ServiceCard/ServiceCard'
+import Coding from '../images/icons/coding.png'
+import Console from '../images/icons/console.png'
+import Megaphone from '../images/icons/megaphone.png'
+import MusicalNote from '../images/icons/musical-note.png'
+
 const StyledWrapper = styled.div`
     display: flex;
     flex-direction: column;
@@ -28,41 +36,105 @@ const StyledWrapper = styled.div`
     }
 `;
 
-const IndexPage = () => (
-    <Layout>
-        <StyledWrapper>
-            <PersonBlock>
-                <Navigation/>
+const ServiceCardsWrapper = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+`;
 
-                <PersonBlock__Header/>
-                <PersonBlock__Body/>
-                <PersonBlock__Footer/>
+const generateServiceCards = () => {
+    const content = [
+        {
+            src: Coding,
+            heading: 'Web development',
+            caption: 'Dive deeper into different topics around building with Gatsby, like sourcing.'
+        },
+        {
+            src: Console,
+            heading: 'Game development',
+            caption: 'Check out libraries for Gatsby starters and plugins, as well.'
+        },
+        {
+            src: Megaphone,
+            heading: 'Music writing',
+            caption: 'Gatsby provides multiple solutions for adding images and files into your projects.'
+        },
+        {
+            src: MusicalNote,
+            heading: 'Advertising',
+            caption: 'Localization is a common problem and there are many solutions, each'
+        },
+    ];
 
-            </PersonBlock>
-            <ContentBlock>
-                <ContentBlock__Section>
-                    <SectionHeading>
-                        Hello
-                    </SectionHeading>
+    return (
+        content.map(item => {
+            return (
+                <ServiceCard
+                    img={item.src}
+                    heading={item.heading}
+                    caption={item.caption}
+                    key={item.heading}
+                />
+            )
+        })
+    )
+};
 
-                    <ContentBlock__Body>
-                        Gatsby is a blazing fast modern site generator for React. Gatsby is a blazing fast modern site generator for React.
-                    </ContentBlock__Body>
-                </ContentBlock__Section>
 
-                <ContentBlock__Section>
-                    <SectionHeading>
-                        Hello2
-                    </SectionHeading>
+class IndexPage extends React.Component {
+    render() {
+        return (
+            <Layout>
+                <StyledWrapper>
+                    <PersonBlock>
+                        <Navigation/>
 
-                    <ContentBlock__Body>
-                        To get started with Gatsby, you’ll need to make sure you have the following software tools installed:
-                        To get started with Gatsby, you’ll need to make sure you have the following software tools installed:
-                    </ContentBlock__Body>
-                </ContentBlock__Section>
-            </ContentBlock>
-        </StyledWrapper>
-    </Layout>
-)
+                        <PersonBlock__Header/>
+                        <PersonBlock__Body/>
+                        <PersonBlock__Footer/>
+
+                    </PersonBlock>
+                    <ContentBlock>
+                        <ContentBlock__Section>
+                            <SectionHeading>
+                                About Gatsby
+                            </SectionHeading>
+
+                            <ContentBlock__Body>
+                                Gatsby is a blazing fast modern site generator for React. Gatsby is a blazing fast modern site generator for React.
+
+                                <List hasTopMargin />
+                            </ContentBlock__Body>
+                        </ContentBlock__Section>
+
+                        <ContentBlock__Section>
+                            <SectionHeading>
+                                Getting started
+                            </SectionHeading>
+
+                            <ContentBlock__Body>
+                                <ServiceCardsWrapper>
+                                    {generateServiceCards()}
+                                </ServiceCardsWrapper>
+                            </ContentBlock__Body>
+                        </ContentBlock__Section>
+
+                        <ContentBlock__Section>
+                            <SectionHeading>
+                                Getting started
+                            </SectionHeading>
+
+                            <ContentBlock__Body>
+                                <ServiceCardsWrapper>
+                                    {generateServiceCards()}
+                                </ServiceCardsWrapper>
+                            </ContentBlock__Body>
+                        </ContentBlock__Section>
+                    </ContentBlock>
+                </StyledWrapper>
+            </Layout>
+        )
+    }
+}
 
 export default IndexPage
