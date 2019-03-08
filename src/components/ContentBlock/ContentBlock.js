@@ -6,24 +6,18 @@ const ContentBlock = styled.article`
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    // padding: 30px 40px;
-    width: 40%;
+    width: 90%;
     min-height: 550px;
     max-height: 550px;
     background: #fff;
     
-    ${ ({theme}) => theme.mediaDown.xl } {
-        width: 37%;
-        min-height: 0;
-    }
-    
-    ${ ({theme}) => theme.mediaDown.sm } {
-        width: 90%;
-        min-height: 0;
-    }
-    
     ${ ({theme}) => theme.mediaUp.md } {
+        width: 45%;
         border-radius: 0 10px 10px 0;
+    }
+    
+    ${ ({theme}) => theme.mediaUp.lg } {
+        width: 40%;
     }
 `;
 

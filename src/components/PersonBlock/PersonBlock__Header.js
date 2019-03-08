@@ -4,6 +4,7 @@ import Motion from '../../images/backgrounds/motion.jpg';
 const PersonBlock__Header = styled.div`
     position: relative;
     overflow: hidden;
+    margin-top: 85px;
     width: 100%;
     height: 290px;
     border-radius: 10px 10px 0 0;
@@ -38,6 +39,10 @@ const PersonBlock__Header = styled.div`
     ${({theme}) => theme.mediaDown.md} {
         border-radius: 0;
         height: 180px;
+    }
+    
+    ${({theme}) => theme.mediaUp.md} {
+        margin-top: 0;
     }
 `;
 

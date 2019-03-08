@@ -11,10 +11,18 @@ const StyledList = styled.ul`
     list-style-type: none;
     color: ${ ({theme}) => theme.colors.font };
     font-size: 13px;
+    
+    ${({theme}) => theme.mediaDown.md } {
+        
+    };
 `;
 
 const StyledListItem = styled.li`
     width: 50%;
+    
+    ${({theme}) => theme.mediaDown.xl } {
+        width: 100%;    
+    };
 `;
 
 const List = () => (

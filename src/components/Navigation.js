@@ -9,15 +9,27 @@ import Mail from '../images/icons/mail.png'
 
 const StyledWrapper = styled.nav`
     position: absolute;
-    top: 10px;
-    right: calc(100% + 10px);
+    top: 0;
+    left: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 20px;
+    width: 100%;
+    background: #fff;
     
-    ${ ({theme}) => theme.mediaDown.md } {
-        position: static;
-        flex-direction: row;
-        justify-content: space-between;
+    ${({theme}) => theme.mediaUp.md} {
+        top: -85px;
+    }
+    
+    ${({theme}) => theme.mediaUp.lg} {
+        top: 10px;
+        z-index: 10;
+        left: auto;
+        right: calc(100% + 10px);
+        display: flex;
+        flex-direction: column;
+        width: 75px;
     }
 `;
 
@@ -43,6 +55,16 @@ const StyledItem = styled(Link)`
     }
     
     ${ ({theme}) => theme.mediaUp.md } {
+        &:first-child {
+            border-radius: 5px 0 0 5px;
+        }
+        
+        &:last-child {
+            border-radius: 0 5px 5px 0;
+        }
+    }
+    
+    ${ ({theme}) => theme.mediaUp.lg } {
         &:not(:last-child) {
             &::before {
                 content: '';

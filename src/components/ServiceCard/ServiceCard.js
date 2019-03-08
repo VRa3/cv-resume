@@ -12,44 +12,31 @@ const StyledWrapper = styled.div`
     padding: 0 15px 15px 15px;
     width: 50%;
     
-    &:nth-child(-n+2) {
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: -5px;
-            display: block;
-            height: 1px;
-            width: calc(100% + 25px);
-            background: linear-gradient(to right, ${({theme}) => theme.colors.gradients.primaryToTransparent});
-        }
+    &:nth-child(n+3) {
+        padding: 15px;
     }
     
-    &:nth-child(n+3) {
-        padding: 15px 15px 0 15px;
-    }
-        
-    &:nth-child(2) {
-        &::after {
-            content: '';
-            position: absolute;
-            top: -20px;
-            left: -5px;
-            display: block;
-            height: 200%;
-            width: 1px;
-            background: linear-gradient(to bottom, ${({theme}) => theme.colors.gradients.primaryToTransparent});
-        }
-        
+    &:nth-child(-n+2) {
         &::before {
             content: '';
             position: absolute;
             bottom: 0;
             left: -5px;
-            display: block;
+            width: 200%;
             height: 1px;
-            width: 100%;
             background: linear-gradient(to right, ${({theme}) => theme.colors.gradients.primaryToTransparent});
+        }
+    }
+
+    &:nth-child(2) {
+        &::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 0;
+            height: calc(200% + 20px);
+            width: 1px;
+            background: linear-gradient(to bottom, ${({theme}) => theme.colors.gradients.primaryToTransparent});
         }
     }
 `;
