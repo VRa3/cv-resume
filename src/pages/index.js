@@ -1,5 +1,8 @@
+import SimpleBar from 'simplebar-react'
+import 'simplebar/dist/simplebar.min.css'
+
 import React from "react"
-import styled from 'styled-components';
+import styled from 'styled-components'
 import Layout from '../layout/Layout'
 
 import SectionHeading from '../components/Headings/SectionHeading'
@@ -21,6 +24,8 @@ import Coding from '../images/icons/coding.png'
 import Console from '../images/icons/console.png'
 import Megaphone from '../images/icons/megaphone.png'
 import MusicalNote from '../images/icons/musical-note.png'
+
+
 
 const StyledWrapper = styled.div`
     display: flex;
@@ -92,44 +97,47 @@ class IndexPage extends React.Component {
                         <PersonBlock__Header/>
                         <PersonBlock__Body/>
                         <PersonBlock__Footer/>
-
                     </PersonBlock>
+
                     <ContentBlock>
-                        <ContentBlock__Section>
-                            <SectionHeading>
-                                About Gatsby
-                            </SectionHeading>
+                        <SimpleBar className={'custom-scroll'}>
+                            <ContentBlock__Section>
+                                <SectionHeading>
+                                    About Gatsby
+                                </SectionHeading>
 
-                            <ContentBlock__Body>
-                                Gatsby is a blazing fast modern site generator for React. Gatsby is a blazing fast modern site generator for React.
+                                <ContentBlock__Body>
+                                    Gatsby is a blazing fast modern site generator for React. Gatsby is a blazing fast modern site generator for React.
 
-                                <List hasTopMargin />
-                            </ContentBlock__Body>
-                        </ContentBlock__Section>
+                                    <List hasTopMargin />
+                                </ContentBlock__Body>
+                            </ContentBlock__Section>
 
-                        <ContentBlock__Section>
-                            <SectionHeading>
-                                Getting started
-                            </SectionHeading>
+                            <ContentBlock__Section>
+                                <SectionHeading>
+                                    Getting started
+                                </SectionHeading>
 
-                            <ContentBlock__Body>
-                                <ServiceCardsWrapper>
-                                    {generateServiceCards()}
-                                </ServiceCardsWrapper>
-                            </ContentBlock__Body>
-                        </ContentBlock__Section>
+                                <ContentBlock__Body>
+                                    <ServiceCardsWrapper>
+                                        {generateServiceCards()}
+                                    </ServiceCardsWrapper>
+                                </ContentBlock__Body>
+                            </ContentBlock__Section>
 
-                        <ContentBlock__Section>
-                            <SectionHeading>
-                                Getting started
-                            </SectionHeading>
+                            <ContentBlock__Section>
+                                <SectionHeading>
+                                    Getting started
+                                </SectionHeading>
 
-                            <ContentBlock__Body>
-                                <ServiceCardsWrapper>
-                                    {generateServiceCards()}
-                                </ServiceCardsWrapper>
-                            </ContentBlock__Body>
-                        </ContentBlock__Section>
+                                <ContentBlock__Body>
+                                    <ServiceCardsWrapper>
+                                        {generateServiceCards()}
+                                    </ServiceCardsWrapper>
+                                </ContentBlock__Body>
+                            </ContentBlock__Section>
+                        </SimpleBar>
+
                     </ContentBlock>
                 </StyledWrapper>
             </Layout>

@@ -33,4 +33,19 @@ export const theme = {
         xl: '@media (max-width: 1199px)',
         xxl: '@media (max-width: 1599px)',
     },
+    scrollBar: `
+    .simplebar-scrollbar::before {
+        background: rgb(112,112,112);
+    }
+    .simplebar-track.simplebar-vertical {
+        padding-top: 10px;
+        height: calc(100% - 20px);
+    }
+    .simplebar-track {
+        right: 5px;
+    }
+    .simplebar-track.simplebar-horizontal {
+        display: none;
+    }
+    `,
 };

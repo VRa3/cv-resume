@@ -20,11 +20,12 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
     
-    .boxo {
-        height: 200px;
-        width: 200px;
-        background: red;
+    .custom-scroll {
+        width: 100% !important;
+        padding: 30px 40px;
     }
+    
+    ${({theme}) => theme.scrollBar}
 `;
 
 const AnimatedBackground = styled.div`

@@ -5,8 +5,8 @@ const ContentBlock = styled.article`
     z-index: 0;
     display: flex;
     flex-direction: column;
-    overflow: auto;
-    padding: 30px 40px;
+    overflow: hidden;
+    // padding: 30px 40px;
     width: 40%;
     min-height: 550px;
     max-height: 550px;
