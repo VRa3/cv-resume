@@ -25,6 +25,8 @@ import Console from '../images/icons/console.png'
 import Megaphone from '../images/icons/megaphone.png'
 import MusicalNote from '../images/icons/musical-note.png'
 
+import PricingBlock from '../components/PricingBlock/PricingBlock'
+
 
 
 const StyledWrapper = styled.div`
@@ -32,9 +34,11 @@ const StyledWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 0 auto;
     padding: 25px 0;
     min-height: 100vh;
     width: 100%;
+    max-width: 1400px;
     
     ${({theme}) => theme.mediaUp.md } {
         flex-direction: row;
@@ -45,6 +49,11 @@ const ServiceCardsWrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px;
+`;
+
+const PricingCardsWrapper = styled.div`
+    display: flex;
+    flex-wrap: wrap;
 `;
 
 const generateServiceCards = () => {
@@ -84,6 +93,46 @@ const generateServiceCards = () => {
         })
     )
 };
+
+const generatePricingBlocks = () => {
+    const content = [
+        {
+            type: 'basic',
+            price: 22,
+            list: [
+                'Web Development',
+                'Game Development',
+                'Music Writing',
+                'Advertising',
+            ]
+        },
+        {
+            type: 'pro',
+            price: 48,
+            list: [
+                'Web Development',
+                'Game Development',
+                'Music Writing',
+                'Advertising',
+                'Copywriting',
+                'Photography'
+            ]
+        },
+    ];
+
+    return (
+        content.map(item => {
+            return (
+                <PricingBlock
+                    type={item.type}
+                    price={item.price}
+                    list={item.list}
+                    key={item.type}
+                />
+            )
+        })
+    )
+}
 
 
 class IndexPage extends React.Component {
@@ -127,13 +176,13 @@ class IndexPage extends React.Component {
 
                             <ContentBlock__Section>
                                 <SectionHeading>
-                                    Getting started
+                                    Pricing plans
                                 </SectionHeading>
 
                                 <ContentBlock__Body>
-                                    <ServiceCardsWrapper>
-                                        {generateServiceCards()}
-                                    </ServiceCardsWrapper>
+                                    <PricingCardsWrapper>
+                                        {generatePricingBlocks()}
+                                    </PricingCardsWrapper>
                                 </ContentBlock__Body>
                             </ContentBlock__Section>
                         </SimpleBar>
