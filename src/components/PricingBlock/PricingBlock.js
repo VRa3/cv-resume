@@ -10,6 +10,12 @@ const StyledWrapper = styled.div`
     ${({theme}) => theme.mediaUp.lg} {
         width: 50%;
     }
+    
+    ${({theme}) => theme.mediaDown.lg} {
+        &:not(:last-of-type) {
+            margin-bottom: 30px;
+        }
+    }
 `;
 
 const StyledImg = styled.img`
@@ -50,17 +56,24 @@ const Price = styled.span`
     font-weight: 500;
 `;
 
+const BenefitsList = styled.ul`
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+`;
+
+const Benefit = styled.li`
+    
+`;
+
 class PricingBlock extends React.Component {
-    state = {
-        type: this.props.type
-    };
-
-
     render() {
         return (
             <StyledWrapper>
                 <StyledDiv>
-                    <StyledImg type={this.state.type} src={Speedometr} alt=""/>
+                    <StyledImg type={this.props.type} src={Speedometr} alt=""/>
                 </StyledDiv>
                 <StyledDiv>
                     {this.props.type}
@@ -69,6 +82,10 @@ class PricingBlock extends React.Component {
                 <PricingDiv>
                     <Sup>$</Sup><Price>{this.props.price}</Price><Sub>hour</Sub>
                 </PricingDiv>
+
+                <BenefitsList>
+                    {this.props.list.map(benefit => <Benefit>{benefit}</Benefit> )}
+                </BenefitsList>
 
             </StyledWrapper>
         )

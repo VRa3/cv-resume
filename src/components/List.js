@@ -18,6 +18,8 @@ const StyledList = styled.ul`
 `;
 
 const StyledListItem = styled.li`
+    display: flex;
+    justify-content: space-between;
     width: 50%;
     
     ${({theme}) => theme.mediaDown.xl } {
@@ -29,25 +31,25 @@ const List = () => (
     <StyledList>
         <StyledListItem>
             <StyledStrong>
-                Age......
+                Age
             </StyledStrong>
                 25
         </StyledListItem>
         <StyledListItem>
             <StyledStrong>
-                Residence......
+                Residence
             </StyledStrong>
                 Netherland
         </StyledListItem>
         <StyledListItem>
             <StyledStrong>
-                Freelance......
+                Freelance
             </StyledStrong>
                 Available
         </StyledListItem>
         <StyledListItem>
             <StyledStrong>
-                Location......
+                Location
             </StyledStrong>
                 Amsterdam, NL
         </StyledListItem>
