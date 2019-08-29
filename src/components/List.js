@@ -25,6 +25,12 @@ const StyledListItem = styled.li`
     ${({theme}) => theme.mediaDown.xl } {
         width: 100%;    
     };
+    
+    ${({theme}) => theme.mediaUp.xl } {
+        &:nth-of-type(odd) {
+            padding-right: 15px;
+        }
+    };
 `;
 
 const List = () => (

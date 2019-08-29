@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const ContentBlock__Body = styled.div`
     position: relative;
-    padding: 20px 0;
+    padding-top: 20px;
     color: ${({theme}) => theme.colors.fontLighter};
     line-height: 1.6;
     font-size: 14px;
